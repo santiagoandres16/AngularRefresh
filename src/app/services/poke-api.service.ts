@@ -11,6 +11,9 @@ export class PokeAPIService {
     private http: HttpClient
   ) { }
   getPokemons(){
-    return this.http.get('${PokeApi.url}/pokemon');
+    return this.http.get(`${PokeApi.url}pokemon`);
+  }
+  getPokemon(id){
+    return this.http.get(`${PokeApi.url}pokemon/${id}`)
   }
 }
